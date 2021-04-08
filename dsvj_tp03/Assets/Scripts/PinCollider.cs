@@ -6,6 +6,7 @@ public class PinCollider : MonoBehaviour
 {
     void OnTriggerExit(Collider col)
     {
-        Debug.Log("asd");
+        if (col.gameObject.tag == "Pin")
+            Debug.Log("asd");
     }
 }
