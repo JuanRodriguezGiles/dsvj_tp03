@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Ball : MonoBehaviour
 {
-    [SerializeField] private float force = 0f;
+    public float force = 0f;
     private bool rolling = false;
     void Start()
     {
@@ -15,7 +15,7 @@ public class Ball : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                rolling = false;
+                rolling = true;
                 GetComponent<ConstantForce>().force = new Vector3(0, 0, force);
                 return;
             }
