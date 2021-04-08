@@ -14,6 +14,6 @@ public class UI : MonoBehaviour
     }
     void Update()
     {
-        force.text = ballScript.force.ToString();
+        force.text = Mathf.Round(ballScript.force).ToString();
     }
 }
