@@ -12,6 +12,7 @@ public class UI : MonoBehaviour
     public TMP_Text pinsLeft;
     public TMP_Text shotsLeft;
     public TMP_Text gameOver;
+    public TMP_Text score;
     void Start()
     {
         ballScript = ball.GetComponent<Ball>();
@@ -22,6 +23,7 @@ public class UI : MonoBehaviour
         shotsLeft.text = "Shots Left: " + gameStatusScript.shotsLeft.ToString();
         pinsLeft.text = "Pins Left: " + gameStatusScript.pinsLeft.ToString();
         force.text = "Force: " + Mathf.Round(ballScript.force).ToString();
+        score.text = "Score: " + gameStatusScript.score.ToString();
         if (!gameStatusScript.playing)
         {
             if (gameStatusScript.pinsLeft > 0)

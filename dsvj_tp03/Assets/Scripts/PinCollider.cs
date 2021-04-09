@@ -17,6 +17,7 @@ public class PinCollider : MonoBehaviour
         if (col.gameObject.tag == "Pin" && !col.gameObject.GetComponent<Pin>().fallen) 
         {
             gameStatusScript.pinsLeft--;
+            gameStatusScript.score += 10;
             col.gameObject.GetComponent<Pin>().fallen = true;
         }
         if (col.gameObject.tag == "Ball")

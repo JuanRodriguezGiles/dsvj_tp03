@@ -8,6 +8,7 @@ public class GameStatus : MonoBehaviour
     public bool playing = true;
     public int shotsLeft = 3;
     public int pinsLeft = 10;
+    public int score = 0;
     void Start()
     {
         ballScript = ball.GetComponent<Ball>();
