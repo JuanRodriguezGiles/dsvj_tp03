@@ -5,6 +5,7 @@ public class Pin : MonoBehaviour
 {
     private Vector3 positionVector3;
     private Vector3 rotationVector3;
+    public bool fallen = false;
     void Start()
     {
         positionVector3 = transform.position;

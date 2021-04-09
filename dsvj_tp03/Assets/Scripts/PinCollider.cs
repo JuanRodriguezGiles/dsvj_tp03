@@ -14,8 +14,11 @@ public class PinCollider : MonoBehaviour
     }
     void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.tag == "Pin")
+        if (col.gameObject.tag == "Pin" && !col.gameObject.GetComponent<Pin>().fallen) 
+        {
             gameStatusScript.pinsLeft--;
+            col.gameObject.GetComponent<Pin>().fallen = true;
+        }
         if (col.gameObject.tag == "Ball")
             ballScript.resetBall();
     }

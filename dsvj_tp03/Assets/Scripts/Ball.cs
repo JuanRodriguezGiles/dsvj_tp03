@@ -6,7 +6,7 @@ public class Ball : MonoBehaviour
     public GameObject gameStatus;
     private GameStatus gameStatusScript;
     public float force = 0f;
-    private bool rolling = false;
+    public bool rolling = false;
     private Vector3 positionVector3;
     private Vector3 rotationVector3;
     void Start()
@@ -21,7 +21,6 @@ public class Ball : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Break();
                 rolling = true;
                 GetComponent<ConstantForce>().force = new Vector3(0, 0, force);
                 gameStatusScript.shotsLeft--;
