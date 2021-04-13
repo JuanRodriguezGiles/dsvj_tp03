@@ -11,6 +11,11 @@ public class Pin : MonoBehaviour
         positionVector3 = transform.position;
         rotationVector3 = transform.rotation.eulerAngles;
     }
+    void Update()
+    {
+        if(fallen)
+            Destroy(gameObject);
+    }
     void resetPin()
     {
         transform.position = positionVector3;
