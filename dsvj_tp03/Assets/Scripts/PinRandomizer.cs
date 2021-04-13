@@ -23,6 +23,7 @@ public class PinRandomizer : MonoBehaviour
                     newPosVector3.y = 1.2f;
                     newPosVector3.z = Random.Range(0, 30);
                 } while (!isPosValid(newPosVector3));
+
                 t.position = newPosVector3;
             }
         }
@@ -32,9 +33,10 @@ public class PinRandomizer : MonoBehaviour
         foreach (var t in pinsTransforms)
         {
             if (pos.x >= t.position.x - 0.5f && pos.x <= t.position.x + 0.5f && pos.z >= t.position.z - 0.5f &&
-                pos.z <= t.position.z + 0.5f)  
+                pos.z <= t.position.z + 0.5f)
                 return false;
         }
+
         return true;
     }
 }
