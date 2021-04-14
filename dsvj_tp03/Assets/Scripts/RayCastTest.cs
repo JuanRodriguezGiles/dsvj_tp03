@@ -28,7 +28,11 @@ public class RayCastTest : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 200))
             {
                 if (hit.collider.gameObject.tag == "Ball")
-                    GameObject.Destroy(hit.collider.gameObject);
+                {
+                    Destroy(hit.collider.gameObject);
+                    GameManagerTest gm = FindObjectOfType<GameManagerTest>();
+                    gm.AddScore(20);
+                }
                 else
                     Instantiate(cubeGameObject, hit.point, Quaternion.identity);
             }
