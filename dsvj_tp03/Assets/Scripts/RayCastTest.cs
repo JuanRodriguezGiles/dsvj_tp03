@@ -7,7 +7,6 @@ public class RayCastTest : MonoBehaviour
 {
     private Camera mainCamera;
     public GameObject cubeGameObject;
-    private bool destroyed = false;
     // Start is called before the first frame update
     void Start()
     {
