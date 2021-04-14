@@ -12,7 +12,7 @@ public class Pin : MonoBehaviour
         rotationVector3 = transform.rotation.eulerAngles;
     }
     void Update()
-    {
+    {//
         if(fallen)
             Destroy(gameObject);
     }
